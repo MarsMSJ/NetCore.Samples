@@ -79,8 +79,8 @@ namespace SamplesLibrary_test
         public void TestIntegerSequences()
         {
             var listA = RandomBase_.GetNumberSequence( TEST_SEQ );
-            var listB = RandomBase_.GetSignedNumberSequence( TEST_SEQ, true );
-            var listC = RandomBase_.GetSignedNumberSequence( TEST_SEQ, false );
+            var listB = RandomBase_.GetSignedNumberSequence( TEST_SEQ );
+            var listC = RandomBase_.GetSignedNumberSequence( TEST_SEQ);
             Assert.True( listA.Count == listB.Count && listB.Count == listC.Count );   
         }
         
