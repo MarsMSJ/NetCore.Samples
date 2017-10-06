@@ -107,10 +107,8 @@ namespace TourApp
 					BgColor = ConsoleColor.Green;		
 					Console.Write(space);
 					BgColor = ConsoleColor.Blue;
-					Console.Write(space);
-					
-					ResetConsole();
-						
+					Console.Write(space);					
+					ResetConsole();						
 			 }
         
         //Printing our sequence
@@ -136,7 +134,7 @@ namespace TourApp
         static ConsoleColor FontColor { set => Console.ForegroundColor = value; }
         static ConsoleColor BgColor { set => Console.BackgroundColor = value; }
         
-				static readonly string fHeading= "This is the Samples Library";
+				static readonly string fHeading= "This is the NetCore.Samples Library";
         static readonly string fDiv = "*******************************";
 				//static readonly string fSpace = "                              ";
         static ConsoleColor DefaultForegroundConsoleColor;
