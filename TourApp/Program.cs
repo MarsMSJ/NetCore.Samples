@@ -6,33 +6,36 @@ namespace TourApp
 {
 	class Program
 	{
+		const int NumberOfSamples = 10;
+		const int RangeMax = 10;
 		static void Main(string[] args)
 		{
 			Intro();
 			
-			//Generate 10 random numbers between -100 and 100
-			Console.WriteLine("\n\nGenerating 10 random integers ( -100 to 100 ):");	
+			//Generate integer sequence, may be negative
+			Console.WriteLine($"\n\nGenerating {NumberOfSamples} random integers ( -{RangeMax} to {RangeMax} ):");	
 			var randomBase = new RandomBase();
-			var randomNumbers = randomBase.GetNumberSequence( 10, 100 );
+			var randomNumbers = randomBase.GetNumberSequence( NumberOfSamples, RangeMax );
 			PrintSequence<int>( randomNumbers );
 			
-			//Generate 10 random numbers between -100 and 100
-			Console.WriteLine("\n\nGenerating 10 random positive integers ( 0 to 100 ):");	
-			randomNumbers = randomBase.GetSignedNumberSequence( 10, 100, true );
+			//Generate positive number sequence
+			Console.WriteLine($"\n\nGenerating {NumberOfSamples} random integers ( 0 to {RangeMax} ):");	
+			randomNumbers = randomBase.GetSignedNumberSequence( NumberOfSamples, 100, true );
 			PrintSequence<int>( randomNumbers );
 			
-			//Generate 10 random numbers between -100 and 100
-			Console.WriteLine("\n\nGenerating 10 random integers ( -100 to 0 ):");
-			randomNumbers = randomBase.GetSignedNumberSequence( 10, 100, false);
+			//Generate negative number sequence
+			Console.WriteLine($"\n\nGenerating {NumberOfSamples} random integers ( -1{RangeMax} to 0 ):");
+			randomNumbers = randomBase.GetSignedNumberSequence( NumberOfSamples, 100, false);
 			PrintSequence<int>( randomNumbers );
 			
-			//Get 5 random strings of random length
-			Console.WriteLine("\n\nGenerating 5 random strings:");			
+			//Get random strings of random length
+			Console.WriteLine($"\n\nGenerating {NumberOfSamples} random strings:");			
 			var strSample = new StringSample();
 			var randomStrings = strSample.GetRandomStrings( 5 );
 			PrintSequence<string>( randomStrings );
 			
-			Outro();
+			Console.WriteLine($"\nDone...\n");
+			Signature();
 			
 		}
 		
@@ -40,7 +43,7 @@ namespace TourApp
 		Region works on Visual Studio Code editors only. 
 		It's nice for having stuff out of the way.
 		*/
-		#region Console Fancy Section
+#region Console Fancy Section
 		/*************************************************************************
 				Don't mind me, I'm just here to make the console fancy looking. 
 				
@@ -60,8 +63,7 @@ namespace TourApp
         }
         
         static void Intro()
-        { 									
-					PrintHorizontalRainbow();	
+        { 	
 					Console.WriteLine(string.Empty);
 					WriteCenter(fDiv);				
 					ResetConsole();
@@ -69,15 +71,19 @@ namespace TourApp
 					WriteCenter("Hello C#/GitHub World");
 					WriteCenter(fHeading);
 					Console.WriteLine(string.Empty);			
-					WriteCenter(fDiv);	
+					WriteCenter(fDiv);					
+					Console.WriteLine(string.Empty);
+				}    
+				
+			
+				
+				static void Signature()
+				{
+					WriteCenter("Github.com/MarsMSJ");
 					PrintHorizontalRainbow();	
 					Console.WriteLine(string.Empty);
-        }    
-				
-				static void Outro()
-				{
-					Console.WriteLine($"\nDone.\n{fDiv}");
-				}    
+					
+				}
        
 			 static void WriteCenter(string str)
 			 {

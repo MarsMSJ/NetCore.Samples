@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamplesLibrary", "SamplesLi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamplesLibrary-test", "SamplesLibrary-test\SamplesLibrary-test.csproj", "{51091498-7809-498E-B2B4-498B7BA6F988}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TourApp", "TourApp\TourApp.csproj", "{4EE864CD-89DB-4B49-A0C6-304972B9310C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,5 +46,17 @@ Global
 		{51091498-7809-498E-B2B4-498B7BA6F988}.Release|x64.Build.0 = Release|x64
 		{51091498-7809-498E-B2B4-498B7BA6F988}.Release|x86.ActiveCfg = Release|x86
 		{51091498-7809-498E-B2B4-498B7BA6F988}.Release|x86.Build.0 = Release|x86
+		{4EE864CD-89DB-4B49-A0C6-304972B9310C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EE864CD-89DB-4B49-A0C6-304972B9310C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EE864CD-89DB-4B49-A0C6-304972B9310C}.Debug|x64.ActiveCfg = Debug|x64
+		{4EE864CD-89DB-4B49-A0C6-304972B9310C}.Debug|x64.Build.0 = Debug|x64
+		{4EE864CD-89DB-4B49-A0C6-304972B9310C}.Debug|x86.ActiveCfg = Debug|x86
+		{4EE864CD-89DB-4B49-A0C6-304972B9310C}.Debug|x86.Build.0 = Debug|x86
+		{4EE864CD-89DB-4B49-A0C6-304972B9310C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EE864CD-89DB-4B49-A0C6-304972B9310C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EE864CD-89DB-4B49-A0C6-304972B9310C}.Release|x64.ActiveCfg = Release|x64
+		{4EE864CD-89DB-4B49-A0C6-304972B9310C}.Release|x64.Build.0 = Release|x64
+		{4EE864CD-89DB-4B49-A0C6-304972B9310C}.Release|x86.ActiveCfg = Release|x86
+		{4EE864CD-89DB-4B49-A0C6-304972B9310C}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 EndGlobal

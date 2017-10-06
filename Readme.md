@@ -58,7 +58,24 @@ Then in add the following line to the top of your code:
 ```
 using SamplesLibrary
 ```
+
 Code away!
+```
+//Get 100 random strings of random length
+var strSample = new StringSample();
+var randomStrings = strSample.GetRandomStrings( 100 );
+
+foreach( var str in randomStrings )
+{
+	Console.WriteLine( $"\nRandom string: {str}" );
+	
+	//Pick random character
+	Console.WriteLine( $"Has character { strSample.GetRandomCharFromString( str ) }" );
+	
+	
+}
+```
+
 
 
 ## Contributing

@@ -58,7 +58,7 @@ namespace SamplesLibrary
         }
        
        //Returns a random number that may be negative
-       public List<int> GetNumberSequence(int count = 10 )
+       public List<int> GetNumberSequence(int count = 10, int limit = 0 )
        {
            if( count < 1 )
            {
@@ -66,10 +66,13 @@ namespace SamplesLibrary
            }
            
            var list = new List<int>();
-           
+           int random = 0;
+					 
            while( list.Count < count )
            {
-               list.Add( GetInt() );
+						random = GetInt();						
+						random = ( limit == 0 ) ? random : random % limit;	 
+            list.Add( random );
            }
            
            return list;
@@ -78,7 +81,10 @@ namespace SamplesLibrary
        
        //Returns either a positive or negative number sequence depending on 
        //the positive parameter
-       public List<int> GetSignedNumberSequence(int count = 10, bool positive = true )
+       public List<int> GetSignedNumberSequence(
+				 int count = 10, 
+				 int limit = 0, 
+				 bool positive = true )
        {
            if( count < 1 )
            {
@@ -86,10 +92,13 @@ namespace SamplesLibrary
            }
            
            var list = new List<int>();
-           
+           int random = 0;
+					 
            while( list.Count < count )
            {
-                list.Add( ( positive ) ? GetPosInt() : GetNegInt() );
+						 random = ( positive ) ? GetPosInt() : GetNegInt() ;
+						 random = ( limit == 0 ) ? random : random % limit;
+						 list.Add( random );
            }
            
            return list;          

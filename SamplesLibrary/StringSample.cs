@@ -6,7 +6,6 @@ using System.Security.Cryptography;
 namespace SamplesLibrary
 {
     
-    
     public class StringSample : RandomBase
     {
         const int MAX_LENGTH = 25;
@@ -16,8 +15,8 @@ namespace SamplesLibrary
         
         public string GetRandomString(  )
         {
-            int randomLength = GetInt() % (MAX_LENGTH - 1) + 1;
-            
+            int randomLength = GetPosInt() % MAX_LENGTH;
+						
             //Initialize with 1 random character
             var strBuild = new StringBuilder( GetRandomChar() );
             
@@ -46,6 +45,20 @@ namespace SamplesLibrary
             
             return strBuild.ToString();
         }
+				
+				public char GetRandomCharFromString( string str )
+				{
+					if( str == string.Empty )
+					{
+						return ' ';
+					}
+					
+					if( str.Length == 1 )
+					{
+						return str[0];
+					}
+					return str[ GetPosInt() % ( str.Length - 1 ) ];
+				}
                
         //Count is 10 by default
         public List<string> GetRandomStrings( int count = 10 )
