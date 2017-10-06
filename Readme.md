@@ -76,6 +76,10 @@ foreach( var str in randomStrings )
 }
 ```
 
+See the TourApp for coding examples. Run the tour app using the following command at the terminal.
+```
+run --project TourApp/*.csproj
+```
 
 
 ## Contributing
